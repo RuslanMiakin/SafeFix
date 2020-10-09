@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">SafeFix</string>
+    <string name="action_create_order">Create Order</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+    <string name="summ">Sum</string>
+    <string name="Category_name">Enter category name</string>
+    <string name="icon_add">Select an icon</string>
+    <string name="send_add">Send</string>
+    <string name="delite_all">Delete all entries</string>
+    <string name="print_all">Print data</string>
+    <string name="delite_ok">Data Cleared</string>
+    <string name="or_send">Select 1 and 3 to delete</string>
+    <string name="summ_add">Enter amount</string>
+    <string name="category_ok">Category added</string>
+    <string name="add_info">Enter data</string>
+    <string name="size_error">String size exceeded</string>
+    <string name="category_dialog_add">Category add</string>
+    <string name="dialog_exit">Close</string>
+    <string name="category_inter">Select a category</string>
+    <string name = "add_1">Airport</string>
+    <string name = "add_2">Fruit</string>
+    <string name = "add_3">Alcohol</string>
+    <string name = "add_4">Cleaning products</string>
+    <string name = "add_5">Sweet</string>
+    <string name = "add_6">Travel</string>
+    <string name = "add_7">Business</string>
+    <string name = "add_8">Toys</string>
+    <string name = "add_9">Diamonds</string>
+    <string name = "add_10">Clothes</string>
+    <string name = "add_11">Favorites</string>
+    <string name = "add_12">Gifts</string>
+    <string name = "add_13">Entertainment</string>
+    <string name = "add_14">Bank</string>
+    <string name = "add_15">Sports</string>
+    <string name = "add_16">Music</string>
+    <string name = "add_17">Accessories</string>
+    <string name = "add_18">Creativity</string>
+    <string name = "add_19">Pizza</string>
+    <string name = "add_20">Plants</string>
+    <string name = "add_21">Shopping</string>
+    <string name = "add_22">Products</string>
+    <string name = "add_23">Teeth</string>
+    <string name = "add_24">Delivery</string>
+
+    <string-array name = "spiner">
+        <item>Sort</item>
+        <item>Sort by date</item>
+        <item>Sort by Category</item>
+        <item>Sort by amount</item>
+    </string-array>
+
+    <string-array name = "titles">
+        <item>SafeFix</item>
+        <item>Operation history</item>
+        <item>Settings</item>
+    </string-array>
+</resources>

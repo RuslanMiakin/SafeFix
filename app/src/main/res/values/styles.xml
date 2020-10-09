@@ -1,0 +1,22 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="CustomAnimationButton">
+        <item name="colorButtonNormal">#1a237e</item>
+        <item name="colorControlHighlight">#673ab7</item>
+        <item name="android:stateListAnimator">@anim/alpha</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+    <style name="datepicker" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+</resources>
