@@ -11,6 +11,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.ItemTouchHelper;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import static android.content.ContentValues.TAG;
 
 public class FragmentVisibleRecicleFull extends Fragment{
     String date;
@@ -241,7 +245,8 @@ public class FragmentVisibleRecicleFull extends Fragment{
 
         @Override
         protected Boolean doInBackground(String... start) {
-            date = (yearn + "-" + (mountn + 1) + "-" + 0 + dayn);
+            date = (yearn + "-" + (mountn + 1) + "-"  + dayn);
+            Log.d(TAG, date );
             try {
                 SafefixDatabaseHelper = new SafeFixDatabaseHelper(getContext());
                 db = SafefixDatabaseHelper.getReadableDatabase();
