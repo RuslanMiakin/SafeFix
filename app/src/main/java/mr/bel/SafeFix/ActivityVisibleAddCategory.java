@@ -1,4 +1,4 @@
-package mr.bel.menunavigationproject;
+package mr.bel.SafeFix;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -76,7 +76,7 @@ public class ActivityVisibleAddCategory extends AppCompatActivity {
                 try {
                     SQLiteOpenHelper SafefixDatabaseHelper = new SafeFixDatabaseHelper(getApplicationContext());
                     SQLiteDatabase db = SafefixDatabaseHelper.getReadableDatabase();
-                    insertDrink(db,cat, image, mon);
+                    insertDB(db,cat, image, mon);
                     db.close();
                     Toast toast = Toast.makeText(getApplicationContext(), R.string.category_ok, Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);
@@ -98,7 +98,7 @@ public class ActivityVisibleAddCategory extends AppCompatActivity {
         });
     }
 
-    private static void insertDrink(SQLiteDatabase db, String Category, int resourceId, String Money) {
+    private static void insertDB(SQLiteDatabase db, String Category, int resourceId, String Money) {
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String strDate = sdf.format(new Date());
         ContentValues drinkValues = new ContentValues();

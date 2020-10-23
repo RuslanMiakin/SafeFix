@@ -1,4 +1,4 @@
-package mr.bel.menunavigationproject;
+package mr.bel.SafeFix;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;

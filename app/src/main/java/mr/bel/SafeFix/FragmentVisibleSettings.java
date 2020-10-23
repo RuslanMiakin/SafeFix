@@ -1,4 +1,4 @@
-package mr.bel.menunavigationproject;
+package mr.bel.SafeFix;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -21,7 +21,6 @@ public class FragmentVisibleSettings extends Fragment implements View.OnClickLis
     View view;
     CheckBox checkBox1,checkBox2,checkBox3;
 
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,7 +37,6 @@ public class FragmentVisibleSettings extends Fragment implements View.OnClickLis
         button2 = view.findViewById(R.id.button_delete2);
         button2.setOnClickListener(this);
         button.setOnClickListener(this);
-
         return view;
     }
 
@@ -56,7 +54,6 @@ public class FragmentVisibleSettings extends Fragment implements View.OnClickLis
                         Toast toast = Toast.makeText(view.getContext(), "Database Error", Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
-
                     }
                     Toast toast = Toast.makeText(view.getContext(), R.string.delite_ok, Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER, 0, 0);

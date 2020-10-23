@@ -1,4 +1,4 @@
-package mr.bel.menunavigationproject;
+package mr.bel.SafeFix;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;

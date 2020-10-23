@@ -1,4 +1,4 @@
-package mr.bel.menunavigationproject;
+package mr.bel.SafeFix;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -59,7 +59,6 @@ String[] CategoryAlert;
 TextView summaRash;
 int IntFav = 0;
 
-
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
@@ -103,11 +102,10 @@ int IntFav = 0;
             textView454 = view.findViewById(R.id.textView3);
             textView454.append("0");
             getedit = textView454.getText().toString();
-
             return view; }
 
-        // Метод записи данных в SQLITE    Фоновый поток
-    private static void insertDrink(SQLiteDatabase db, String Category, int resourceId, String Money) {
+        // Метод записи данных в SQLITE
+    private static void insert(SQLiteDatabase db, String Category, int resourceId, String Money) {
         @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String strDate = sdf.format(new Date());
         ContentValues drinkValues = new ContentValues();
@@ -218,11 +216,11 @@ int IntFav = 0;
             @Override
             public void onNothingSelected() {}});
 
-        RecyclerView pizzaRecycler = view.findViewById(R.id.pizza_recycler);
+        RecyclerView Recycler = view.findViewById(R.id.pizza_recycler);
         CaptionedImagesAdapter adapter = new CaptionedImagesAdapter(view.getContext(),MoneyRecic, ImageRecic,CategoryRecic,DATERecic,idArray);
-        pizzaRecycler.setAdapter(adapter);
+        Recycler.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL, false);
-        pizzaRecycler.setLayoutManager(layoutManager);
+        Recycler.setLayoutManager(layoutManager);
     }
 }
 
@@ -268,7 +266,7 @@ int IntFav = 0;
                         if (cFav.moveToFirst()) {
                             IntFav = cFav.getInt(cFav.getColumnIndex("IMAGE_RESOURCE_ID"));
                         } cFav.close();}
-                    insertDrink(db, CategoryAlert[which],IntFav, MoneyIntent);
+                    insert(db, CategoryAlert[which],IntFav, MoneyIntent);
                 db.close();
             } catch(SQLiteException e) {
                 Toast toast = Toast.makeText(view.getContext(), "Database Error", Toast.LENGTH_SHORT);

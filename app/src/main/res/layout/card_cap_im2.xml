@@ -20,24 +20,25 @@
             android:id="@+id/info_image_add"
             android:layout_width="33dp"
             android:layout_height="33dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1.0"
             android:scaleType="centerCrop"
             android:textColor="#FDFDFD"
+            card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toStartOf="@+id/textView_add"
-            card_view:layout_constraintHorizontal_bias="0.846"
-            card_view:layout_constraintStart_toStartOf="parent"
-            card_view:layout_constraintTop_toTopOf="parent" />
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintVertical_bias="0.529" />
 
         <TextView
             android:id="@+id/textView_add"
-            android:layout_width="155dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="72dp"
+            android:layout_width="33dp"
+            android:layout_height="22dp"
             android:text="TextView"
             android:textSize="18sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintHorizontal_bias="0.537"
+            card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
 
 

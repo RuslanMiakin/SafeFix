@@ -1,4 +1,4 @@
-package mr.bel.menunavigationproject;
+package mr.bel.SafeFix;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private String[] titles;
     private ListView drawerList;
     private int currentPosition = 0;
-
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

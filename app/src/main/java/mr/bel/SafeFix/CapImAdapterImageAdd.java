@@ -1,5 +1,4 @@
-package mr.bel.menunavigationproject;
-
+package mr.bel.SafeFix;
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import androidx.cardview.widget.CardView;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class CapImAdapterImageAdd extends RecyclerView.Adapter<CapImAdapterImageAdd.ViewHolder>{

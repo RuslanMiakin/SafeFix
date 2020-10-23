@@ -1,5 +1,4 @@
-package mr.bel.menunavigationproject;
-
+package mr.bel.SafeFix;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,10 +10,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
-import java.util.List;
-
 
 class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter.ViewHolder>{
 
@@ -33,6 +29,7 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
             cardView = v;
         }
     }
+
     public CaptionedImagesAdapter(Context context,ArrayList<String> captions, ArrayList<Integer> imageIds,ArrayList<String> category, ArrayList<String> time,ArrayList<Integer> idArray){
         this.captions = captions;
         this.imageIds = imageIds;
@@ -41,7 +38,6 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
         this.idArray = idArray;
         this.context=context;
     }
-
 
     @Override
     public CaptionedImagesAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -65,27 +61,21 @@ class CaptionedImagesAdapter extends RecyclerView.Adapter<CaptionedImagesAdapter
         textcategory.setText(category.get(position));
         TextView idText = cardView.findViewById(R.id.textView_id);
         idText.setText(""+idArray.get(position));
-
     }
 
-
     public void deleteItem(int position) {
-
         captions.remove(position);
         notifyItemRemoved(position);
         String del = String.valueOf(idArray.get(position));
         SafeFixDatabaseHelper safeFixDatabaseHelper = new SafeFixDatabaseHelper(context);
         db = safeFixDatabaseHelper.getWritableDatabase();
         db.delete("MONEY", "_id = ?",new String[] {del});
-        db.close();
-
-    }
+        db.close();}
 
     @Override
     public int getItemCount(){
         return captions.size();
     }
-
     public void setData(ArrayList<String> captions, ArrayList<Integer> imageIds,ArrayList<String> category, ArrayList<String> time,ArrayList<Integer> idArray){
         this.captions = captions;
         this.imageIds = imageIds;
